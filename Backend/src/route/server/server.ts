@@ -52,12 +52,30 @@ app.get("/get", (req, res)=>{
     })
 })
 
-app.post("/insert", (req, res) => {
+app.post("/insertFir", (req, res) => {
     const group1join = req.body.group1join;
     const title = req.body.title;
     const sqlQuery = "update test1 set group1join = concat(group1join, (?),'/') where title = (?);";
     connection.query(sqlQuery, [group1join, title], (err, result) => {
-        console.log('신청 성공');
+        console.log('선착순 신청 성공');
+    });
+});
+
+app.post("/insertDir", (req, res) => {
+    const group1wait = req.body.group1wait;
+    const title = req.body.title;
+    const sqlQuery = "update test1 set group1wait = concat(group1wait, (?),'/') where title = (?);";
+    connection.query(sqlQuery, [group1wait, title], (err, result) => {
+        console.log('개설자 신청 성공');
+    });
+});
+
+app.post("/updateMem", (req, res) => {
+    const group1wait = req.body.group1wait;
+    const title = req.body.title;
+    const sqlQuery = "update test1 set group1join = concat(group1join, (?),'/') where title = (?);";
+    connection.query(sqlQuery, [group1wait, title], (err, result) => {
+        console.log('개설자 신청 성공');
     });
 });
 

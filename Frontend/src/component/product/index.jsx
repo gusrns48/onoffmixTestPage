@@ -18,6 +18,7 @@ function Product() {
     });
   }, [])
 
+
   return(
     <div className={style.product}>
       <div className={style.bigname}>모집 중인 모임</div><br/>
@@ -25,7 +26,8 @@ function Product() {
       {viewContent.map(element =>
           <div style={{ border: '3px solid #333'}}>
             <div className={style.title}>{element.title}</div>
-            <div className={style.contents}>{element.contents}
+            <div className={style.contents}>{element.contents}</div>
+            <div className={style.contents}>그룹 1 인원 : {(element.group1join||'').split('/').length-1}/{(element.group1||'').split('/')[5]}
               {element.master === userId ? (
                 <div>
                   <div style={{marginBottom : '10px'}}>내 모임입니다.</div>

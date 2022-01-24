@@ -18,6 +18,16 @@ function Masterclass(props){
 
   },[])
 
+  const group1mem=(group1join)=>{
+    var group1member = group1join
+    for(var i=0; i<group1member.length-2; i++) {group1member[i] += ', '}
+    return group1member
+  }
+
+  const changemem=()=>{
+    
+  }
+
   return(
     <div className={style.product}>
       <div className={style.bigname}>내가 개설한 모임 ID : {userId}</div><br/>
@@ -28,8 +38,10 @@ function Masterclass(props){
             <div>
               <div className={style.title}>{element.title}</div>
               <div className={style.contents}>{element.contents}</div><br/>
-              <div className={style.contents}>그룹1 신청자 명단 : </div>
-              <div className={style.contents}>그룹1 신청자수 : </div>
+              <div className={style.contents}>그룹1 신청자 명단 : {group1mem((element.group1join||'').split('/'))}</div>
+              {(element.group1||'').split('/')[6] === 'directly' && <div className={style.contents}>그룹 1 승인 대기 명단 : {group1mem((element.group1wait||'').split('/'))}</div>}
+              <div className={style.contents}>그룹1 인원 : {(element.group1join||'').split('/').length-1}/{(element.group1||'').split('/')[5]}</div>
+              
             </div>
           }
         </div>

@@ -25,6 +25,16 @@ function Signup() {
   }
 
   const submitSignUp = async () => {
+    if(userId.length < 5){
+      alert("아이디는 5자리 이상으로 설정해주세요.")
+      return
+    }
+    else if(userId.indexOf('/') != -1 || userId.indexOf('~') != -1 || userId.indexOf('!') != -1 || userId.indexOf('@') != -1 || userId.indexOf('#') != -1 || userId.indexOf('$') != -1 ){
+      alert("아이디에는 특수문자를 사용 할 수 없습니다.")
+      return
+    }
+
+
     let payload = {
       userId,
       userName,

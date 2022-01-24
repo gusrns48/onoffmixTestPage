@@ -23,8 +23,17 @@ const Detailclass = ({ history, location, match }) => {
     });
   },[])
 
-  const submit = ()=>{
-    Axios.post('http://localhost:3001/insert', {
+  const submitFir = ()=>{
+    Axios.post('http://localhost:3001/insertFir', {
+      group1join: userId,
+      title: viewContent.title,
+    });
+    alert('등록 완료!');
+    window.location.href = '/';
+  };
+
+  const submitDir = ()=>{
+    Axios.post('http://localhost:3001/insertDir', {
       group1join: userId,
       title: viewContent.title,
     });
@@ -58,7 +67,8 @@ const Detailclass = ({ history, location, match }) => {
         <div className={style.contents}>그룹명 : {group1[0]}</div>
         <div className={style.contents}>신청기간 : {group1[1]}~{group1[2]}</div>
         <div className={style.contents}>행사날짜 : {group1[3]}~{group1[4]}</div>
-        <div className={style.contents}>정원 : 0/{group1[5]}<button onClick={submit}>그룹1 신청</button></div>
+        <div className={style.contents}>{group1[6] === 'firstCome' ? ( <div><a>승인 방법 : 선착순</a><button onClick={submitFir}>그룹1 신청</button></div>) : ( <div><a>승인 방법 : 개설자 승인</a> <button onClick={submitDir}>그룹1 신청</button></div>)}</div>
+        <div className={style.contents}>그룹 1 인원 : {(viewContent.group1join||'').split('/').length-1}/{group1[5]}</div>
 
         {group2[0]!=='' &&
           <div>
@@ -67,7 +77,9 @@ const Detailclass = ({ history, location, match }) => {
             <div className={style.contents}>그룹명 : {group2[0]}</div>
             <div className={style.contents}>신청기간 : {group2[1]}~{group2[2]}</div>
             <div className={style.contents}>행사날짜 : {group2[3]}~{group2[4]}</div>
-            <div className={style.contents}>정원 : 0/{group2[5]}<button>그룹2 신청</button></div>
+            <div className={style.contents}>{group2[6] === 'firstCome' ? ( <a>승인 방법 : 선착순</a>) : ( <a>승인 방법 : 개설자 승인</a> )}</div>
+            <div className={style.contents}>그룹 1 인원 : {(viewContent.group1join||'').split('/').length-1}/{group2[5]}<button onClick={submitDir}>그룹2 신청</button>
+            </div>
           </div>
         }
 
