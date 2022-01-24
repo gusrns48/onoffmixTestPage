@@ -146,8 +146,8 @@ app.post("/delmem1", (req, res) => {
     const group1join = req.body.group1join;
     const group1wait = req.body.group1wait;
     const title = req.body.title;
-    const sqlQuery = "update test1 set group1join = replace(group1join, concat((?),'/'),'') where title = (?);";
-    const sqlQuery1 = "update test1 set group1wait = replace(group1wait, concat((?),'/'),'') where title = (?);";
+    const sqlQuery = "update test1 set group1join = replace(group1join, concat((?),'/'),' ') where title = (?);";
+    const sqlQuery1 = "update test1 set group1wait = replace(group1wait, concat((?),'/'),' ') where title = (?);";
     connection.query(sqlQuery, [group1join, title], (err, result) => {
         console.log('변경 성공');
     });
@@ -160,8 +160,8 @@ app.post("/delmem2", (req, res) => {
     const group2join = req.body.group2join;
     const group2wait = req.body.group2wait;
     const title = req.body.title;
-    const sqlQuery = "update test1 set group2join = replace(group2join, concat((?),'/'),'') where title = (?);";
-    const sqlQuery1 = "update test1 set group2wait = replace(group2wait, concat((?),'/'),'') where title = (?);";
+    const sqlQuery = "update test1 set group2join = replace(group2join, concat((?),'/'),' ') where title = (?);";
+    const sqlQuery1 = "update test1 set group2wait = replace(group2wait, concat((?),'/'),' ') where title = (?);";
     connection.query(sqlQuery, [group2join, title], (err, result) => {
         console.log('변경 성공');
     });
@@ -174,8 +174,8 @@ app.post("/delmem3", (req, res) => {
     const group3join = req.body.group3join;
     const group3wait = req.body.group3wait;
     const title = req.body.title;
-    const sqlQuery = "update test1 set group3join = replace(group3join, concat((?),'/'),'') where title = (?);";
-    const sqlQuery1 = "update test1 set group3wait = replace(group3wait, concat((?),'/'),'') where title = (?);";
+    const sqlQuery = "update test1 set group3join = replace(group3join, concat((?),'/'),' ') where title = (?);";
+    const sqlQuery1 = "update test1 set group3wait = replace(group3wait, concat((?),'/'),' ') where title = (?);";
     connection.query(sqlQuery, [group3join, title], (err, result) => {
         console.log('변경 성공');
     });

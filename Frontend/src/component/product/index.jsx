@@ -37,7 +37,7 @@ function Product() {
                   </div>
                 ) : (
                   <div><br/>&ensp;
-                    <a className={style.login} href={`/detailclass/${element.key}`}>신청하기</a>
+                    <a className={style.login} href={`/detailclass/${element.key}`}>신청하러 가기</a>
                   </div>
               )}
               <br/>
