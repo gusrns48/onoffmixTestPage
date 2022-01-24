@@ -1,0 +1,19 @@
+.App {
+  text-align: center;
+}
+
+*::-webkit-scrollbar {
+  height: 10px !important;
+  width: 8px !important;
+  background-color: #1e1e2f !important;
+}
+
+*::-webkit-scrollbar-thumb {
+  border-radius: 10px !important;
+  background-color: #555 !important;
+}
+
+*::-webkit-scrollbar-track {
+  border-radius: 10px !important;
+  background-color: #1e1e2f !important;
+}
