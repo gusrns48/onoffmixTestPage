@@ -27,15 +27,20 @@ function Product() {
           <div style={{ border: '3px solid #333'}}>
             <div className={style.title}>{element.title}</div>
             <div className={style.contents}>{element.contents}</div>
-            <div className={style.contents}>그룹 1 인원 : {(element.group1join||'').split('/').length-1}/{(element.group1||'').split('/')[5]}
+            <div className={style.contents}>그룹 1 인원 : {(element.group1join||'').split('/').length-1}/{(element.group1||'').split('/')[5]}</div>
+            {(element.group2||'').split('/')[0] !== '' && <div className={style.contents}>그룹 2 인원 : {(element.group2join||'').split('/').length-1}/{(element.group2||'').split('/')[5]}</div>}
+            <div>
+              {(element.group3||'').split('/')[0] !== '' && <div className={style.contents}>그룹 3 인원 : {(element.group3join||'').split('/').length-1}/{(element.group3||'').split('/')[5]}</div>}
               {element.master === userId ? (
-                <div>
-                  <div style={{marginBottom : '10px'}}>내 모임입니다.</div>
-                  <a className={style.login} href={'/masterclass'}>내 모임 보기</a>
-                </div>
-              ) : (
-                <a className={style.login} href={`/detailclass/${element.key}`}>신청하기</a>
+                  <div><br/>
+                    <div className={style.contents}>내 모임입니다.</div>
+                  </div>
+                ) : (
+                  <div><br/>&ensp;
+                    <a className={style.login} href={`/detailclass/${element.key}`}>신청하기</a>
+                  </div>
               )}
+              <br/>
             </div>
           </div>
         )}

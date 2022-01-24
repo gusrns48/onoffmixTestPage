@@ -149,7 +149,7 @@ const NewClass = () => {
       postPayload.group3 = `${groups[2].name}/${groups[2].startPutDate}/${groups[2].donePutDate}/${groups[2].startEventDate}/${groups[2].doneEventDate}/${groups[2].maxNum}/${groups[2].approval}`;
     }
 
-    fetch("http://localhost:3001/idplz", {
+    fetch("http://localhost:3001/newclass", {
       method : "post", // 통신방법
       headers : {
         "content-type" : "application/json",

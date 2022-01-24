@@ -17,14 +17,18 @@ const Detailclass = ({ history, location, match }) => {
   let { no } = match.params ;
 
   useEffect(()=>{
+    if(userId === null){
+      alert("로그인이 필요합니다.");
+      window.location.href = '/login';
+    }
     Axios.get('http://localhost:3001/get').then((response)=>{
       response.data = response.data[no-1];
       setViewContent(response.data);
     });
   },[])
 
-  const submitFir = ()=>{
-    Axios.post('http://localhost:3001/insertFir', {
+  const submitFir1 = ()=>{
+    Axios.post('http://localhost:3001/insertFir1', {
       group1join: userId,
       title: viewContent.title,
     });
@@ -32,21 +36,49 @@ const Detailclass = ({ history, location, match }) => {
     window.location.href = '/';
   };
 
-  const submitDir = ()=>{
-    Axios.post('http://localhost:3001/insertDir', {
-      group1join: userId,
+  const submitDir1 = ()=>{
+    Axios.post('http://localhost:3001/insertDir1', {
+      group1wait: userId,
       title: viewContent.title,
     });
     alert('등록 완료!');
     window.location.href = '/';
   };
 
-  const getValue = e => {
-    const { name, value } = e.target;
-    setContent({
-      ...content,
-      [name]: value
-    })
+  const submitFir2 = ()=>{
+    Axios.post('http://localhost:3001/insertFir2', {
+      group2join: userId,
+      title: viewContent.title,
+    });
+    alert('등록 완료!');
+    window.location.href = '/';
+  };
+
+  const submitDir2 = ()=>{
+    Axios.post('http://localhost:3001/insertDir2', {
+      group2wait: userId,
+      title: viewContent.title,
+    });
+    alert('등록 완료!');
+    window.location.href = '/';
+  };
+
+  const submitFir3 = ()=>{
+    Axios.post('http://localhost:3001/insertFir3', {
+      group3join: userId,
+      title: viewContent.title,
+    });
+    alert('등록 완료!');
+    window.location.href = '/';
+  };
+
+  const submitDir3 = ()=>{
+    Axios.post('http://localhost:3001/insertDir3', {
+      group3wait: userId,
+      title: viewContent.title,
+    });
+    alert('등록 완료!');
+    window.location.href = '/';
   };
 
   const group1 = (viewContent.group1||'').split('/');
@@ -67,30 +99,30 @@ const Detailclass = ({ history, location, match }) => {
         <div className={style.contents}>그룹명 : {group1[0]}</div>
         <div className={style.contents}>신청기간 : {group1[1]}~{group1[2]}</div>
         <div className={style.contents}>행사날짜 : {group1[3]}~{group1[4]}</div>
-        <div className={style.contents}>{group1[6] === 'firstCome' ? ( <div><a>승인 방법 : 선착순</a><button onClick={submitFir}>그룹1 신청</button></div>) : ( <div><a>승인 방법 : 개설자 승인</a> <button onClick={submitDir}>그룹1 신청</button></div>)}</div>
+        <div className={style.contents}>{group1[6] === 'firstCome' ? ( <div><a>승인 방법 : 선착순</a>&emsp;<button onClick={submitFir1}>그룹1 신청</button></div>) : ( <div><a>승인 방법 : 개설자 승인</a>&emsp;<button onClick={submitDir1}>그룹1 신청</button></div>)}</div>
         <div className={style.contents}>그룹 1 인원 : {(viewContent.group1join||'').split('/').length-1}/{group1[5]}</div>
 
         {group2[0]!=='' &&
           <div>
             <hr/>
-            <div className={style.title}>그룹2</div><br />
+            <div className={style.title}>그룹2</div><br/>
             <div className={style.contents}>그룹명 : {group2[0]}</div>
             <div className={style.contents}>신청기간 : {group2[1]}~{group2[2]}</div>
             <div className={style.contents}>행사날짜 : {group2[3]}~{group2[4]}</div>
-            <div className={style.contents}>{group2[6] === 'firstCome' ? ( <a>승인 방법 : 선착순</a>) : ( <a>승인 방법 : 개설자 승인</a> )}</div>
-            <div className={style.contents}>그룹 1 인원 : {(viewContent.group1join||'').split('/').length-1}/{group2[5]}<button onClick={submitDir}>그룹2 신청</button>
-            </div>
+            <div className={style.contents}>{group2[6] === 'firstCome' ? ( <div><a>승인 방법 : 선착순</a>&emsp;<button onClick={submitFir2}>그룹2 신청</button></div>) : ( <div><a>승인 방법 : 개설자 승인</a>&emsp;<button onClick={submitDir2}>그룹2 신청</button></div>)}</div>
+            <div className={style.contents}>그룹 2 인원 : {(viewContent.group2join||'').split('/').length-1}/{group2[5]}</div>
           </div>
         }
 
         {group3[0]!=='' &&
           <div>
             <hr/>
-            <div className={style.title}>그룹3</div><br />
+            <div className={style.title}>그룹3</div><br/>
             <div className={style.contents}>그룹명 : {group3[0]}</div>
             <div className={style.contents}>신청기간 : {group3[1]}~{group3[2]}</div>
             <div className={style.contents}>행사날짜 : {group3[3]}~{group3[4]}</div>
-            <div className={style.contents}>정원 : 0/{group3[5]}<button>그룹3 신청</button></div>
+            <div className={style.contents}>{group3[6] === 'firstCome' ? ( <div><a>승인 방법 : 선착순</a>&emsp;<button onClick={submitFir3}>그룹3 신청</button></div>) : ( <div><a>승인 방법 : 개설자 승인</a>&emsp;<button onClick={submitDir3}>그룹3 신청</button></div>)}</div>
+            <div className={style.contents}>그룹 3 인원 : {(viewContent.group3join||'').split('/').length-1}/{group3[5]}</div>
           </div>
         }
 

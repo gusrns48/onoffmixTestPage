@@ -3,7 +3,6 @@ import './App.css'
 import Footer from './component/layout/footer'
 import Header from './component/layout/header'
 import Login from './component/login'
-import Mypage from './component/mypage'
 import Product from './component/product'
 import Detailclass from './component/detailclass'
 import Signup from './component/signup'
@@ -19,7 +18,6 @@ function App() {
         <Route exact path="/" component={Product} />
         <Route exact path="/product" component={Product} />
         <Route exact path='/detailclass/:no' component={Detailclass} />
-        <Route exact path="/mypage" component={Mypage} />
         <Route exact path="/login" component={Login} />
         <Route exact path="/signup" component={Signup} />
         <Route exact path="/newclass" component={Newclass} />

@@ -15,6 +15,36 @@ function Myclass(props){
       });
   
     },[])
+
+    const delmem1 = (title)=>{
+      Axios.post('http://localhost:3001/delmem1', {
+        group1wait: userId,
+        group1join: userId,
+        title: title,
+      });
+      alert('취소 완료!');
+      window.location.href = '/myclass';
+    };
+
+    const delmem2 = (title)=>{
+      Axios.post('http://localhost:3001/delmem2', {
+        group2wait: userId,
+        group2join: userId,
+        title: title,
+      });
+      alert('취소 완료!');
+      window.location.href = '/myclass';
+    };
+
+    const delmem3 = (title)=>{
+      Axios.post('http://localhost:3001/delmem3', {
+        group3wait: userId,
+        group3join: userId,
+        title: title,
+      });
+      alert('취소 완료!');
+      window.location.href = '/myclass';
+    };
   
     return(
       <div className={style.product}>
@@ -26,14 +56,56 @@ function Myclass(props){
               <div>
                 <div className={style.title}>{element.title}</div>
                 <div className={style.contents}>{element.contents}</div><br/>
+                <div className={style.contents}>{(element.group1||'').split('/')[0]}</div>
                 <div className={style.contents}>{element.group1join.indexOf(userId) != -1 ? (<a>승인 상태 : 승인 완료</a>) : (<a>승인 상태 : 승인 대기</a>)}</div>
+                <button className={style.button} onClick={()=>delmem1(element.title)}>취소하기</button>
               </div>
             }
             {element.group1wait.indexOf(userId) != -1 &&
               <div>
                 <div className={style.title}>{element.title}</div>
                 <div className={style.contents}>{element.contents}</div><br/>
+                <div className={style.contents}>{(element.group1||'').split('/')[0]}</div>
                 <div className={style.contents}>{element.group1join.indexOf(userId) != -1 ? (<a>승인 상태 : 승인 완료</a>) : (<a>승인 상태 : 승인 대기</a>)}</div>
+                <button className={style.button} onClick={()=>delmem1(element.title)}>취소하기</button>
+              </div>
+            }
+
+            {element.group2join.indexOf(userId) != -1 &&
+              <div>
+                <div className={style.title}>{element.title}</div>
+                <div className={style.contents}>{element.contents}</div><br/>
+                <div className={style.contents}>{(element.group2||'').split('/')[0]}</div>
+                <div className={style.contents}>{element.group2join.indexOf(userId) != -1 ? (<a>승인 상태 : 승인 완료</a>) : (<a>승인 상태 : 승인 대기</a>)}</div>
+                <button className={style.button} onClick={()=>delmem2(element.title)}>취소하기</button>
+              </div>
+            }
+            {element.group2wait.indexOf(userId) != -1 &&
+              <div>
+                <div className={style.title}>{element.title}</div>
+                <div className={style.contents}>{element.contents}</div><br/>
+                <div className={style.contents}>{(element.group2||'').split('/')[0]}</div>
+                <div className={style.contents}>{element.group2join.indexOf(userId) != -1 ? (<a>승인 상태 : 승인 완료</a>) : (<a>승인 상태 : 승인 대기</a>)}</div>
+                <button className={style.button} onClick={()=>delmem2(element.title)}>취소하기</button>
+              </div>
+            }
+
+            {element.group3join.indexOf(userId) != -1 &&
+              <div>
+                <div className={style.title}>{element.title}</div>
+                <div className={style.contents}>{element.contents}</div><br/>
+                <div className={style.contents}>{(element.group3||'').split('/')[0]}</div>
+                <div className={style.contents}>{element.group3join.indexOf(userId) != -1 ? (<a>승인 상태 : 승인 완료</a>) : (<a>승인 상태 : 승인 대기</a>)}</div>
+                <button className={style.button} onClick={()=>delmem3(element.title)}>취소하기</button>
+              </div>
+            }
+            {element.group3wait.indexOf(userId) != -1 &&
+              <div>
+                <div className={style.title}>{element.title}</div>
+                <div className={style.contents}>{element.contents}</div><br/>
+                <div className={style.contents}>{(element.group3||'').split('/')[0]}</div>
+                <div className={style.contents}>{element.group3join.indexOf(userId) != -1 ? (<a>승인 상태 : 승인 완료</a>) : (<a>승인 상태 : 승인 대기</a>)}</div>
+                <button className={style.button} onClick={()=>delmem3(element.title)}>취소하기</button>
               </div>
             }
           </div>
