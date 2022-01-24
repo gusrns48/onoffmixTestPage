@@ -6,6 +6,10 @@ CREATE TABLE `tistory`.`test1` (
   `group2` VARCHAR(100) NULL,  
   `group3` VARCHAR(100) NULL,  
   `master` VARCHAR(50) NULL,
-  `group1join` VARCHAR(1000) '',
-  `group1wait` VARCHAR(1000) '',
+  `group1join` VARCHAR(1000) default '',
+  `group1wait` VARCHAR(1000) default '',
+  `group2join` VARCHAR(1000) default '',
+  `group2wait` VARCHAR(1000) default '',
+  `group3join` VARCHAR(1000) default '',
+  `group3wait` VARCHAR(1000) default '',
   PRIMARY KEY (`key`));
