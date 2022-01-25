@@ -17,9 +17,9 @@ npm i
 npm run start
 ```
 ## frame
-DB : MySQL 8.0
-WebServer : node.js
-Freamework : react, node.js
+DB : MySQL 8.0<br>
+WebServer : node.js<br>
+Freamework : react, node.js<br>
 version control : github
 
 ## DBschema.txt (Backend/DBschema)
