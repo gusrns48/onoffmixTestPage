@@ -117,7 +117,7 @@ function Masterclass(props){
                       <div>
                         <div className={style.contents}>그룹 1 승인 대기 명단 : {group1mem((element.group1wait||'').split('/'))}</div>
                         <input type="text" className={style.contents} placeholder='아이디' onChange={(event) => {setGroup1Wait(event.target.value);}}></input>
-                        <a className={style.login} onClick={()=>updateMem1(element.title)}>승인허가</a>
+                        <a className={style.login} onClick={()=>updateMem1(element.title)}>승인허가</a><br/><br/>
 
                         <div className={style.contents}>그룹 1 승인 제거</div>
                         <input type="text" className={style.contents} placeholder='아이디' onChange={(event) => {setGroup1Wait(event.target.value);}}></input>
@@ -135,7 +135,7 @@ function Masterclass(props){
                       <div>
                         <div className={style.contents}>그룹 2 승인 대기 명단 : {group2mem((element.group2wait||'').split('/'))}</div>
                         <input type="text" className={style.contents} placeholder='아이디' onChange={(event) => {setGroup2Wait(event.target.value);}}></input>
-                        <a className={style.login} onClick={()=>updateMem2(element.title)}>승인허가</a>
+                        <a className={style.login} onClick={()=>updateMem2(element.title)}>승인허가</a><br/><br/>
 
                         <div className={style.contents}>그룹 2 승인 제거</div>
                         <input type="text" className={style.contents} placeholder='아이디' onChange={(event) => {setGroup2Wait(event.target.value);}}></input>

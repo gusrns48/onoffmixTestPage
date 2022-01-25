@@ -40,6 +40,7 @@ function Header() {
               </a>
             ) : (
               <div className={classes.bottom}>
+                <a href="/mainclass">모집 중인 모임&emsp;</a>
                 <a href="/newclass">모임개설&emsp;</a>
                 <a href="/masterclass">개설한 모임&emsp;</a>
                 <a href="/myclass">신청모임 보기</a>

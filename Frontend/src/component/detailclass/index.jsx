@@ -101,7 +101,7 @@ const Detailclass = ({ history, location, match }) => {
         <div className={style.contents}>행사날짜 : {group1[3]}~{group1[4]}</div>
         <div className={style.contents}>인원 : {(viewContent.group1join||'').split('/').length-1}/{group1[5]}</div>
         {(viewContent.group1join||'').split('/').length-1 < group1[5] ?
-          (<div className={style.contents}>{group1[6] === 'firstCome' ? ( <div><a>승인 방법 : 선착순</a>&emsp;<button onClick={submitFir1}>그룹1 신청</button></div>) : ( <div><a>승인 방법 : 개설자 승인</a>&emsp;<button onClick={submitDir1}>그룹1 신청</button></div>)}</div>
+          (<div className={style.contents}>{group1[6] === 'firstCome' ? ( <div><a>승인 방법 : 선착순</a>&emsp;<button onClick={submitFir1}>그룹1 신청</button><input type='text' placeholder='신청사유' className={style.contents}></input></div>) : ( <div><a>승인 방법 : 개설자 승인</a>&emsp;<button onClick={submitDir1}>그룹1 신청</button><input type='text' placeholder='신청사유' className={style.contents}></input></div>)}</div>
           ):(
             <div className={style.maxover}>인원초과입니다.</div>
           )
@@ -116,7 +116,7 @@ const Detailclass = ({ history, location, match }) => {
             <div className={style.contents}>행사날짜 : {group2[3]}~{group2[4]}</div>
             <div className={style.contents}>인원 : {(viewContent.group2join||'').split('/').length-1}/{group2[5]}</div>
             {(viewContent.group2join||'').split('/').length-1 < group2[5] ?
-              (<div className={style.contents}>{group2[6] === 'firstCome' ? ( <div><a>승인 방법 : 선착순</a>&emsp;<button onClick={submitFir2}>그룹2 신청</button></div>) : ( <div><a>승인 방법 : 개설자 승인</a>&emsp;<button onClick={submitDir2}>그룹2 신청</button></div>)}</div>
+              (<div className={style.contents}>{group2[6] === 'firstCome' ? ( <div><a>승인 방법 : 선착순</a>&emsp;<button onClick={submitFir2}>그룹2 신청</button><input type='text' placeholder='신청사유' className={style.contents}></input></div>) : ( <div><a>승인 방법 : 개설자 승인</a>&emsp;<button onClick={submitDir2}>그룹2 신청</button><input type='text' placeholder='신청사유' className={style.contents}></input></div>)}</div>
               ):(
                 <div className={style.maxover}>인원초과입니다.</div>
               )
@@ -133,7 +133,7 @@ const Detailclass = ({ history, location, match }) => {
             <div className={style.contents}>행사날짜 : {group3[3]}~{group3[4]}</div>
             <div className={style.contents}>인원 : {(viewContent.group3join||'').split('/').length-1}/{group3[5]}</div>
             {(viewContent.group3join||'').split('/').length-1 < group3[5] ?
-              (<div className={style.contents}>{group3[6] === 'firstCome' ? ( <div><a>승인 방법 : 선착순</a>&emsp;<button onClick={submitFir3}>그룹3 신청</button></div>) : ( <div><a>승인 방법 : 개설자 승인</a>&emsp;<button onClick={submitDir3}>그룹3 신청</button></div>)}</div>
+              (<div className={style.contents}>{group3[6] === 'firstCome' ? ( <div><a>승인 방법 : 선착순</a>&emsp;<button onClick={submitFir3}>그룹3 신청</button><input type='text' placeholder='신청사유' className={style.contents}></input></div>) : ( <div><a>승인 방법 : 개설자 승인</a>&emsp;<button onClick={submitDir3}>그룹3 신청</button><input type='text' placeholder='신청사유' className={style.contents}></input></div>)}</div>
               ):(
                 <div className={style.maxover}>인원초과입니다.</div>
               )
