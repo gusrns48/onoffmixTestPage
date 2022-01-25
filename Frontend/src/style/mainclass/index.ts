@@ -1,6 +1,6 @@
 import { createStyles, makeStyles } from '@material-ui/core'
 
-export const productStyle = makeStyles(() =>
+export const mainclassStyle = makeStyles(() =>
   createStyles({
     product: {
       maxWidth: '1285px',
@@ -33,6 +33,24 @@ export const productStyle = makeStyles(() =>
       fontWeight: 'bold',
       display: 'flex',
       justifyContent: 'space-between',
+    },
+    maxover: {
+      margin: '10px 0px',
+      padding: '0px 10px',
+      fontSize: '15px',
+      fontWeight: 'bold',
+      display: 'flex',
+      justifyContent: 'space-between',
+      color: '#cc0000',
+    },
+    myclass: {
+      margin: '10px 0px',
+      padding: '0px 10px',
+      fontSize: '15px',
+      fontWeight: 'bold',
+      display: 'flex',
+      justifyContent: 'space-between',
+      color: '#00a000',
     },
     filter: {
       padding: '20px',

@@ -1,9 +1,9 @@
 import React, { useEffect, useState, Component } from 'react'
-import { productStyle } from '../../style/product';
+import { mainclassStyle } from '../../style/mainclass';
 import Axios from 'axios';
 
 function Myclass(props){
-    const style = productStyle()
+    const style = mainclassStyle()
     const [viewContent, setViewContent] = useState([]);
   
     const userId = localStorage.getItem('userId');
@@ -52,60 +52,33 @@ function Myclass(props){
         <hr/><br/>
         {viewContent.map(element =>
           <div style={{ border: '3px solid #333'}}>
-            {element.group1join.indexOf(userId) != -1 &&
+            {(element.group1join.indexOf(userId) != -1 || element.group1wait.indexOf(userId) != -1) &&
               <div>
                 <div className={style.title}>{element.title}</div>
                 <div className={style.contents}>{element.contents}</div><br/>
                 <div className={style.contents}>{(element.group1||'').split('/')[0]}</div>
                 <div className={style.contents}>{element.group1join.indexOf(userId) != -1 ? (<a>승인 상태 : 승인 완료</a>) : (<a>승인 상태 : 승인 대기</a>)}</div>
-                <button className={style.button} onClick={()=>delmem1(element.title)}>취소하기</button>
-              </div>
-            }
-            {element.group1wait.indexOf(userId) != -1 &&
-              <div>
-                <div className={style.title}>{element.title}</div>
-                <div className={style.contents}>{element.contents}</div><br/>
-                <div className={style.contents}>{(element.group1||'').split('/')[0]}</div>
-                <div className={style.contents}>{element.group1join.indexOf(userId) != -1 ? (<a>승인 상태 : 승인 완료</a>) : (<a>승인 상태 : 승인 대기</a>)}</div>
-                <button className={style.button} onClick={()=>delmem1(element.title)}>취소하기</button>
+                &ensp;<button className={style.button} onClick={()=>delmem1(element.title)}>취소하기</button><hr/>
               </div>
             }
 
-            {element.group2join.indexOf(userId) != -1 &&
+            {(element.group2join.indexOf(userId) != -1 || element.group2wait.indexOf(userId) != -1) &&
               <div>
                 <div className={style.title}>{element.title}</div>
                 <div className={style.contents}>{element.contents}</div><br/>
                 <div className={style.contents}>{(element.group2||'').split('/')[0]}</div>
                 <div className={style.contents}>{element.group2join.indexOf(userId) != -1 ? (<a>승인 상태 : 승인 완료</a>) : (<a>승인 상태 : 승인 대기</a>)}</div>
-                <button className={style.button} onClick={()=>delmem2(element.title)}>취소하기</button>
-              </div>
-            }
-            {element.group2wait.indexOf(userId) != -1 &&
-              <div>
-                <div className={style.title}>{element.title}</div>
-                <div className={style.contents}>{element.contents}</div><br/>
-                <div className={style.contents}>{(element.group2||'').split('/')[0]}</div>
-                <div className={style.contents}>{element.group2join.indexOf(userId) != -1 ? (<a>승인 상태 : 승인 완료</a>) : (<a>승인 상태 : 승인 대기</a>)}</div>
-                <button className={style.button} onClick={()=>delmem2(element.title)}>취소하기</button>
+                &ensp;<button className={style.button} onClick={()=>delmem2(element.title)}>취소하기</button><hr/>
               </div>
             }
 
-            {element.group3join.indexOf(userId) != -1 &&
+            {(element.group3join.indexOf(userId) != -1 || element.group3wait.indexOf(userId) != -1) &&
               <div>
                 <div className={style.title}>{element.title}</div>
                 <div className={style.contents}>{element.contents}</div><br/>
                 <div className={style.contents}>{(element.group3||'').split('/')[0]}</div>
                 <div className={style.contents}>{element.group3join.indexOf(userId) != -1 ? (<a>승인 상태 : 승인 완료</a>) : (<a>승인 상태 : 승인 대기</a>)}</div>
-                <button className={style.button} onClick={()=>delmem3(element.title)}>취소하기</button>
-              </div>
-            }
-            {element.group3wait.indexOf(userId) != -1 &&
-              <div>
-                <div className={style.title}>{element.title}</div>
-                <div className={style.contents}>{element.contents}</div><br/>
-                <div className={style.contents}>{(element.group3||'').split('/')[0]}</div>
-                <div className={style.contents}>{element.group3join.indexOf(userId) != -1 ? (<a>승인 상태 : 승인 완료</a>) : (<a>승인 상태 : 승인 대기</a>)}</div>
-                <button className={style.button} onClick={()=>delmem3(element.title)}>취소하기</button>
+                &ensp;<button className={style.button} onClick={()=>delmem3(element.title)}>취소하기</button><hr/>
               </div>
             }
           </div>
