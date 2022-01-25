@@ -9,7 +9,7 @@ npm i
 npm run server
 ```
 
-!!!another terminal!!!
+another terminal
 ```sh
 cd ..
 cd .\Frontend\
