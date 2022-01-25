@@ -57,3 +57,11 @@ error : indexOf ...
 
 : ex) update test1 set group1join = '' where title = 'title'<br>
   groupsjoin, groupswait must be '' not null
+  
+  
+## role check
+1. 회원가입 및 로그인 (O)
+2. 서비스 메인 페이지 (△) : 정렬 기준 실패
+3. 모임 상세 및 신청 페이지(통합) (O)
+4. 모임 개설자 메뉴 (O)
+5. 모임 신청자 메뉴 (O)
