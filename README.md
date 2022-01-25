@@ -39,19 +39,19 @@ CREATE TABLE `tistory`.`test1` (
 ## If you have Error..
 ### backend error : 
 
-1) Client does not support authentication protocol requested by server; consider upgrading MySQL  client
+1. Client does not support authentication protocol requested by server; consider upgrading MySQL  client
 
 : alter user 'root'@'localhost' identified with mysql_native_password by '1234';
 
-2) Error Code: 1175. You are using safe update mode and you tried to update a table without a WHERE that uses a KEY...
+2. Error Code: 1175. You are using safe update mode and you tried to update a table without a WHERE that uses a KEY...
 
 : set sql_safe_updates = 0;
 
-3) if you "delete *from test1;"
+3. if you "delete *from test1;"
 
 : you must "ALTER TABLE test1 AUTO_INCREMENT=1;"
 
-4) error : indexOf ...
+4. error : indexOf ...
 
 : ex) update test1 set group1join = '' where title = 'title'
   groupsjoin, groupswait must be '' not null
