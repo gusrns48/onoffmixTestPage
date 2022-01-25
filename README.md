@@ -37,7 +37,8 @@ CREATE TABLE `tistory`.`test1` (
 ```
 
 ## If you have Error..
-backend error : 
+### backend error : 
+
 1) Client does not support authentication protocol requested by server; consider upgrading MySQL  client
 
 : alter user 'root'@'localhost' identified with mysql_native_password by '1234';
@@ -47,8 +48,10 @@ backend error :
 : set sql_safe_updates = 0;
 
 3) if you "delete *from test1;"
-you must "ALTER TABLE test1 AUTO_INCREMENT=1;"
+
+: you must "ALTER TABLE test1 AUTO_INCREMENT=1;"
 
 4) error : indexOf ...
-ex) update test1 set group1join = '' where title = 'title'
-groupsjoin, groupswait must be '' not null
+
+: ex) update test1 set group1join = '' where title = 'title'
+  groupsjoin, groupswait must be '' not null
