@@ -37,7 +37,7 @@ CREATE TABLE `tistory`.`test1` (
 ```
 
 ## If you have Error..
-### Backend error : 
+### Backend error
 
 Client does not support authentication protocol requested by server; consider upgrading MySQL  client
 
@@ -45,11 +45,11 @@ Client does not support authentication protocol requested by server; consider up
 
 Error Code: 1175. You are using safe update mode and you tried to update a table without a WHERE that uses a KEY...
 
-: set sql_safe_updates = 0;
+: set sql_safe_updates = 0;<br><hr>
 
 if you "delete *from test1;"
 
-: you must "ALTER TABLE test1 AUTO_INCREMENT=1;"
+: you must "ALTER TABLE test1 AUTO_INCREMENT=1;"<br><hr>
 
 error : indexOf ...
 
