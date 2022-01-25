@@ -46,21 +46,21 @@ CREATE TABLE `tistory`.`test3` (
 
 Client does not support authentication protocol requested by server; consider upgrading MySQL  client
 
-: alter user 'root'@'localhost' identified with mysql_native_password by '1234';<br><hr>
+: ```alter user 'root'@'localhost' identified with mysql_native_password by '1234';```<br><hr>
 
 Error Code: 1175. You are using safe update mode and you tried to update a table without a WHERE that uses a KEY...
 
-: set sql_safe_updates = 0;<br>
+: ```set sql_safe_updates = 0;```<br>
 or<br>
 : MySQL workbench > Edit > Prederences... > SQL Editor - SafeUpdates(rejects Up...) uncheck<br><hr>
 
 if you "delete *from test1;"
 
-: you must "ALTER TABLE test1 AUTO_INCREMENT=1;"<br><hr>
+: ```you must "ALTER TABLE test1 AUTO_INCREMENT=1;"<br><hr>```
 
 error : indexOf ...
 
-: ex) update test1 set group1join = '' where title = 'title'<br>
+: ex) ```update test1 set group1join = '' where title = 'title'```<br>
   groupsjoin, groupswait must be '' not null
   
   
