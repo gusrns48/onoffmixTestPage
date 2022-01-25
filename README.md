@@ -56,7 +56,7 @@ or<br>
 
 if you "delete *from test1;"
 
-: ```you must "ALTER TABLE test1 AUTO_INCREMENT=1;"<br><hr>```
+: ```you must "ALTER TABLE test1 AUTO_INCREMENT=1;"```<br><hr>
 
 error : indexOf ...
 
