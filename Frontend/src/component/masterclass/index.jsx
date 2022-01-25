@@ -94,33 +94,41 @@ function Masterclass(props){
               }<br/>
 
               {(element.group2||'').split('/')[0] !== '' && <div className={style.contents}>그룹2 신청자 명단 : {group2mem((element.group2join||'').split('/'))}</div>}
-              {(element.group2||'').split('/')[6] === 'directly' && (element.group2||'').split('/')[0] !== '' ?
-                (<div>
-                  <div className={style.contents}>승인 방신 : 개설자
+              {(element.group2||'').split('/')[6] === 'directly' && (element.group2||'').split('/')[0] !== '' &&
+                <div>
+                  <div className={style.contents}>그룹2 인원 : {(element.group2join||'').split('/').length-1}/{(element.group2||'').split('/')[5]}
                       <div>
                         <div className={style.contents}>그룹 2 승인 대기 명단 : {group2mem((element.group2wait||'').split('/'))}</div>
                         <input type="text" className={style.contents} placeholder='아이디' onChange={(event) => {setGroup2Wait(event.target.value);}}></input>
                         <a className={style.login} onClick={()=>updateMem2(element.title)}>승인허가</a>
                       </div>
                   </div>
-                </div>) : (<div></div>)
+                </div>
               }
-              {(element.group2||'').split('/')[0] !== '' && <div className={style.contents}>그룹2 인원 : {(element.group2join||'').split('/').length-1}/{(element.group2||'').split('/')[5]}</div>}<br/>
+              {(element.group2||'').split('/')[6] === 'firstCome' && (element.group2||'').split('/')[0] !== '' &&
+                <div className={style.contents}>그룹2 인원 : {(element.group2join||'').split('/').length-1}/{(element.group2||'').split('/')[5]}</div>
+              }<br/>
+
+
+
 
               {(element.group3||'').split('/')[0] !== '' && <div className={style.contents}>그룹3 신청자 명단 : {group3mem((element.group3join||'').split('/'))}</div>}
-              {(element.group3||'').split('/')[6] === 'directly' && (element.group2||'').split('/')[0] !== '' ?
-                (<div>
-                  <div className={style.contents}>승인 방신 : 개설자
+              {(element.group3||'').split('/')[6] === 'directly' && (element.group3||'').split('/')[0] !== '' &&
+                <div>
+                  <div className={style.contents}>그룹3 인원 : {(element.group3join||'').split('/').length-1}/{(element.group3||'').split('/')[5]}
                       <div>
                         <div className={style.contents}>그룹 3 승인 대기 명단 : {group3mem((element.group3wait||'').split('/'))}</div>
                         <input type="text" className={style.contents} placeholder='아이디' onChange={(event) => {setGroup3Wait(event.target.value);}}></input>
                         <a className={style.login} onClick={()=>updateMem3(element.title)}>승인허가</a>
                       </div>
                   </div>
-                </div>) : (<div></div>)
+                </div>
+              }<br/>
+              {(element.group3||'').split('/')[6] === 'firstCome' && (element.group3||'').split('/')[0] !== '' &&
+                <div>
+                  <div className={style.contents}>그룹3 인원 : {(element.group3join||'').split('/').length-1}/{(element.group3||'').split('/')[5]}</div>
+                </div>
               }
-              {(element.group3||'').split('/')[0] !== '' && <div className={style.contents}>그룹3 인원 : {(element.group3join||'').split('/').length-1}/{(element.group3||'').split('/')[5]}</div>}<br/>
-
             </div>
           }
         </div>
