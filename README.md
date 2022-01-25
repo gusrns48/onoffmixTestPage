@@ -1,13 +1,10 @@
 # onoffmix_test_webpage
 
-How to install
+##How to install
 
-Backend
-Frontend
-
+set any folder
 ```sh
 git clone https://github.com/kinghyeongu/onoffmix-home.git
-
 cd .\Backend\
 npm i
 npm run server
@@ -20,8 +17,7 @@ npm i
 npm run start
 ```
 
-
-DBschema.txt (Backend/DBschema)
+##DBschema.txt (Backend/DBschema)
 ```sh
 CREATE TABLE `tistory`.`test1` (
   `key` INT NOT NULL AUTO_INCREMENT,
