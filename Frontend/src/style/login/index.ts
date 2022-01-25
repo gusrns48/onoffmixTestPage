@@ -8,6 +8,11 @@ export const loginStyle = makeStyles(() =>
       height: 'calc(100% - 254px)',
       backgroundColor: 'black',
     },
+    signup: {
+      width: '100%',
+      height: 'calc(100% - 254px)',
+      backgroundColor: 'black',
+    },
     container: {
       maxWidth: '450px',
       width: '100%',
@@ -43,6 +48,26 @@ export const loginStyle = makeStyles(() =>
         padding: '0px 12px',
         fontSize: '15px',
         border: '1px solid #ffffff',
+      },
+      '&>div': {
+        width: 'calc(100% - 24px)',
+        height: '40px',
+        backgroundColor: 'black',
+        color: '#ffffff',
+        outline: 'none',
+        borderRadius: '3px',
+        padding: '0px 12px',
+        fontSize: '15px',
+        border: '1px solid #ffffff',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        cursor: 'pointer',
+        transition: 'ease-in 0.2s all',
+        '&:hover': {
+          backgroundColor: '#ffffff',
+          color: 'black',
+        },
       },
     },
     button: {
