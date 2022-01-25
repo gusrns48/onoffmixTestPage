@@ -1,5 +1,3 @@
-import { ContactlessOutlined } from '@material-ui/icons';
-import { Link } from 'react-router-dom';
 import React, { useEffect, useState, Component } from 'react'
 import { mainclassStyle } from '../../style/mainclass';
 import Axios from 'axios';

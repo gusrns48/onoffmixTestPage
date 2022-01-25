@@ -1,8 +1,6 @@
-import { ContactlessOutlined, Filter1TwoTone } from '@material-ui/icons';
 import React, { useEffect, useState, Component } from 'react'
 import { mainclassStyle } from '../../style/mainclass';
 import Axios from 'axios';
-import { SSL_OP_NETSCAPE_CHALLENGE_BUG } from 'constants';
 
 function Masterclass(props){
   const style = mainclassStyle()

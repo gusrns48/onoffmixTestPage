@@ -1,8 +1,6 @@
-import { ContactlessOutlined, Filter1TwoTone } from '@material-ui/icons';
 import React, { useEffect, useState, Component } from 'react'
 import { mainclassStyle } from '../../style/mainclass';
 import Axios from 'axios';
-import { SSL_OP_NETSCAPE_CHALLENGE_BUG } from 'constants';
 
 const Detailclass = ({ history, location, match }) => {
   const style = mainclassStyle()
@@ -88,7 +86,7 @@ const Detailclass = ({ history, location, match }) => {
   return(
     
     <div className={style.product}>
-      <div className={style.bigname}>{viewContent.title}&emsp;개설자 : {viewContent.master}</div><br/>
+      <div className={style.bigname}>{viewContent.title}</div><div className={style.title}>개설자 : {viewContent.master}</div><br/>
       <hr/><br/>
       <div style={{ border: '3px solid #333'}}>
         <div className={style.title}>내용</div>

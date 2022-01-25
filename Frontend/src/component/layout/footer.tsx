@@ -1,4 +1,3 @@
-import React from 'react'
 import { footerStyle } from '../../style/layout/footer'
 
 function Footer() {
