@@ -46,6 +46,8 @@ Client does not support authentication protocol requested by server; consider up
 Error Code: 1175. You are using safe update mode and you tried to update a table without a WHERE that uses a KEY...
 
 : set sql_safe_updates = 0;<br><hr>
+or
+: MySQL workbench > Edit > Prederences... > SQL Editor - SafeUpdates(rejects Up...) uncheck
 
 if you "delete *from test1;"
 
