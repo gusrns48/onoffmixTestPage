@@ -34,7 +34,7 @@ CREATE TABLE `tistory`.`test1` (
   `group3join` VARCHAR(1000) default '',
   `group3wait` VARCHAR(1000) default '',
   PRIMARY KEY (`key`));
-```sh
+```
 
 ## If you have Error..
 backend error : 
