@@ -16,11 +16,11 @@ cd .\Frontend\
 npm i
 npm run start
 ```
-## frame
+## Frame
 DB : MySQL 8.0<br>
-WebServer : node.js<br>
-Freamework : react, node.js<br>
-version control : github
+WebServer : Node.js<br>
+Freamework : React, Node.js<br>
+version control : Github
 
 ## DBschema.txt (Backend/DBschema)
 ```sh
@@ -64,7 +64,7 @@ error : indexOf ...
   groupsjoin, groupswait must be '' not null
   
   
-## role check
+## Role check
 1. 회원가입 및 로그인 (O)
 2. 서비스 메인 페이지 (△) : 정렬 기준 실패
 3. 모임 상세 및 신청 페이지(통합) (O)
