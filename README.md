@@ -19,7 +19,7 @@ npm run start
 
 ## DBschema.txt (Backend/DBschema)
 ```sh
-CREATE TABLE `tistory`.`test1` (
+CREATE TABLE `tistory`.`test3` (
   `key` INT NOT NULL AUTO_INCREMENT,
   `title` VARCHAR(50) NULL,
   `contents` VARCHAR(300) NULL,
