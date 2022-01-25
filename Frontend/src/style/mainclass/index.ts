@@ -1,9 +1,8 @@
-import { makeStyles } from '@material-ui/styles'
-import createStyles from '@material-ui/styles/createStyles'
+import { createStyles, makeStyles } from '@material-ui/core'
 
-export const newclassStyle = makeStyles(() =>
+export const mainclassStyle = makeStyles(() =>
   createStyles({
-    product : {
+    product: {
       maxWidth: '1285px',
       margin: '0 auto',
       color: '#ffffff',
@@ -11,7 +10,7 @@ export const newclassStyle = makeStyles(() =>
       padding: '30px 0px',
       minHeight: 'calc(100% - 314px)',
     },
-    bigname : {
+    bigname: {
       margin: '10px 0px',
       padding: '0px 10px',
       fontSize: '25px',
@@ -19,16 +18,15 @@ export const newclassStyle = makeStyles(() =>
       display: 'flex',
       justifyContent: 'space-between',
     },
-    category: {
+    title: {
       margin: '10px 0px',
       padding: '0px 10px',
-      fontSize: '22px',
+      fontSize: '20px',
       fontWeight: 'bold',
       display: 'flex',
       justifyContent: 'space-between',
-      marginBottom: '26px',
     },
-    smcategory: {
+    contents: {
       margin: '10px 0px',
       padding: '0px 10px',
       fontSize: '15px',
@@ -36,34 +34,34 @@ export const newclassStyle = makeStyles(() =>
       display: 'flex',
       justifyContent: 'space-between',
     },
-    titleStyle : {
-      margin: '10px 10px',
-      padding: '0px 10px',
-      fontSize: '30px',
-      marginBottom: '26px',
-      fontWeight: 'bold',
-    },
-    textarea: {
-      margin: '10px 10px',
+    maxover: {
+      margin: '10px 0px',
       padding: '0px 10px',
       fontSize: '15px',
-      overflow: 'hidden',
-      width: '400px',
-      height: '100px',
-      marginBottom: '26px',
       fontWeight: 'bold',
+      display: 'flex',
+      justifyContent: 'space-between',
+      color: '#cc0000',
+    },
+    myclass: {
+      margin: '10px 0px',
+      padding: '0px 10px',
+      fontSize: '15px',
+      fontWeight: 'bold',
+      display: 'flex',
+      justifyContent: 'space-between',
+      color: '#00a000',
     },
     button: {
-      width: '100%',
       marginBottom: '20px',
       '&>button': {
-        width: '100%',
-        height: '40px',
+        width: '120px',
+        height: '30px',
         backgroundColor: '#3B434D',
         color: '#ffffff',
         border: 'none',
         outline: 'none',
-        fontSize: '15px',
+        fontSize: '14px',
         cursor: 'pointer',
         borderRadius: '3px',
         transition: 'ease-in 0.2s background-color',
@@ -72,20 +70,20 @@ export const newclassStyle = makeStyles(() =>
         },
       },
     },
-    date:{
-      margin: '10px 10px',
-      padding: '0px 10px',
-      overflow: 'hidden',
-      marginBottom: '26px',
-      fontWeight: 'bold',
-    },
-    box: {
-      margin: '10px 10px',
-      padding: '0px 10px',
-      overflow: 'hidden',
-      marginBottom: '26px',
-      fontWeight: 'bold',
-    },
 
+    login: {
+      color: '#E9BD15',
+      textDecoration: 'none',
+      border: '1px solid #E9BD15',
+      cursor: 'pointer',
+      alignItems: 'center',
+      padding: '4px 13px',
+      borderRadius: '20px',
+      transition: 'all ease-in 0.1s',
+      '&:hover': {
+        backgroundColor: '#E9BD15',
+        color: '#ffffff',
+      },
+    },
   })
 )

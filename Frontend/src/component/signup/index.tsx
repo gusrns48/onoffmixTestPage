@@ -1,5 +1,5 @@
 import React from 'react'
-import { signupStyle } from '../../style/signup'
+import { loginStyle } from '../../style/login'
 
 interface IValidate {
   email: boolean
@@ -7,7 +7,7 @@ interface IValidate {
 }
 
 function Signup() {
-  const classes = signupStyle()
+  const classes = loginStyle()
   const [userId, setUserId] = React.useState<string>('')
   const [userName, setUserName] = React.useState<string>('')
   const [passwd, setPasswd] = React.useState<string>('')
