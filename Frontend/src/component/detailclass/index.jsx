@@ -88,7 +88,7 @@ const Detailclass = ({ history, location, match }) => {
   return(
     
     <div className={style.product}>
-      <div className={style.bigname}>{viewContent.title}&emsp;ID : {viewContent.key}</div><br/>
+      <div className={style.bigname}>{viewContent.title}&emsp;개설자 : {viewContent.master}</div><br/>
       <hr/><br/>
       <div style={{ border: '3px solid #333'}}>
         <div className={style.title}>내용</div>
