@@ -53,5 +53,5 @@ if you "delete *from test1;"
 
 error : indexOf ...
 
-: ex) update test1 set group1join = '' where title = 'title'
+: ex) update test1 set group1join = '' where title = 'title'<br>
   groupsjoin, groupswait must be '' not null
