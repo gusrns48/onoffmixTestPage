@@ -9,8 +9,8 @@ npm i
 npm run server
 ```
 
-```sh
 !!!another terminal!!!
+```sh
 cd ..
 cd .\Frontend\
 npm i
