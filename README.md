@@ -16,6 +16,11 @@ cd .\Frontend\
 npm i
 npm run start
 ```
+##frame
+DB : MySQL 8.0
+WebServer : node.js
+Freamework : react, node.js
+version control : github
 
 ## DBschema.txt (Backend/DBschema)
 ```sh
