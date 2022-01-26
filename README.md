@@ -3,7 +3,7 @@
 ## How to install
 set any folder
 ```sh
-git clone https://github.com/kinghyeongu/onoffmix-home.git
+git clone https://github.com/kinghyeongu/onoffmixTestPage.git
 cd .\Backend\
 npm i
 npm run server
